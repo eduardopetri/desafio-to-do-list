@@ -1,0 +1,158 @@
+.toDoListWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 1.5rem;
+
+}
+
+.toDoListHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.toDoListHeader strong {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.0625rem;
+}
+
+.toDoListHeader strong:first-child {
+    color: var(--blue-300);
+}
+
+.toDoListHeader strong + strong {
+    color: var(--purple-300);
+}
+
+.toDoListHeader strong span {
+    padding: 0.125rem 0.5rem;
+    background: var(--gray-400);
+    border-radius: 999px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--gray-200);
+}
+
+.toDoListEmptyContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1.5rem;
+
+    border-top: 1px solid var(--gray-400);
+    border-radius: 8px;
+}
+
+.toDoListEmptyContainer img{
+    height: 3.5rem;
+}
+
+.toDoListEmptyContainer p:first-of-type {
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+.toDoListContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.75rem;
+
+}
+
+.toDoWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    gap: 0.75rem;
+    background: var(--gray-500);
+    border: 1px solid var(--gray-400);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+}
+
+.toDoCheckbox {
+    text-decoration: line-through;
+    color: var(--gray-300);
+}
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-clip: content-box;
+    border-radius: 6px;
+    border: solid 2px var(--blue-300);
+    border-radius: 100%;
+    transition: all 0.2s;
+}
+
+input[type=checkbox]:checked {
+    border: none;
+    background-color: var(--purple-500);
+    position: relative;
+}
+
+input[type=checkbox]:checked::after {
+    content: '';
+    background: url(../assets/check-icon.svg) no-repeat center center;
+    background-size: 0.75rem;
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    top: 0;
+    left: 0;
+}
+
+
+.toDoWrapper input::before {
+    border-radius: 999px;
+    position: relative;
+}
+
+.toDoWrapper p {
+    width: 100%;
+    color: var(--gray-100);
+
+    transition: all .3s;
+}
+
+.toDoWrapper .toDoCompletedDescription {
+    color: var(--gray-300);
+    text-decoration: line-through;
+}
+
+
+.toDoWrapper button {
+    background: transparent;
+    color: var(--gray-300);
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+
+.toDoWrapper button:hover {
+    background: var(--gray-400);
+    color: var(--red-300);
+}
+

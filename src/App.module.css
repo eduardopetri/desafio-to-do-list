@@ -1,0 +1,61 @@
+.wrapper{
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
+
+.createToDoForm {  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0px;
+    transform: translateY(-50%);
+}
+
+.createToDoForm input {
+    background: var(--gray-500);
+    color: var(--gray-100);
+
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+    
+    height: 54px;
+    padding: 1rem;
+    flex: 1;
+}
+
+.createToDoForm button {
+    cursor: pointer;
+    background: var(--blue-500);
+    display: flex;
+    align-items: center;
+    height: 52px;
+    padding: 1rem;
+    border: 0px;
+    border-radius: 8px;
+
+    color: var(--gray-100);
+    font-size: 0.875rem;  
+    font-weight: 700;
+    
+    transition: background .3s;
+}
+
+.createToDoForm button:hover {
+    background: var(--blue-300);
+}
+
+.createToDoForm button svg{ 
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: 0.5rem; 
+}
